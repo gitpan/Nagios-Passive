@@ -1,6 +1,6 @@
 ---
 name: Nagios-Passive
-version: v0.2.1
+version: v0.2.2
 author:
   - 'Danijel Tasov <data@cpan.org>'
 abstract: drop check results into nagios' spool dir
@@ -19,10 +19,9 @@ configure_requires:
 provides:
   Nagios::Passive:
     file: lib/Nagios/Passive.pm
-    version: v0.2.1
+    version: v0.2.2
   Nagios::Passive::Base:
     file: lib/Nagios/Passive/Base.pm
-    version: v0.1.0
   Nagios::Passive::CommandFile:
     file: lib/Nagios/Passive/CommandFile.pm
   Nagios::Passive::ResultPath:
