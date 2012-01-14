@@ -1,32 +1,46 @@
 ---
-name: Nagios-Passive
-version: v0.2.2
+abstract: "drop check results into nagios' spool dir"
 author:
   - 'Danijel Tasov <data@cpan.org>'
-abstract: drop check results into nagios' spool dir
-license: perl
-resources:
-  license: http://dev.perl.org/licenses/
-requires:
-  File::Temp: 0
-  Moose: 0.92
-  Nagios::Plugin: 0
+build_requires:
   Test::More: 0
-  perl: v5.8.0
-  version: 0
+  Test::TempDir: 0
 configure_requires:
-  Module::Build: 0.35
-provides:
-  Nagios::Passive:
-    file: lib/Nagios/Passive.pm
-    version: v0.2.2
-  Nagios::Passive::Base:
-    file: lib/Nagios/Passive/Base.pm
-  Nagios::Passive::CommandFile:
-    file: lib/Nagios/Passive/CommandFile.pm
-  Nagios::Passive::ResultPath:
-    file: lib/Nagios/Passive/ResultPath.pm
-generated_by: Module::Build version 0.35
+  Module::Build: 0.38
+dynamic_config: 1
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.113640'
+license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
+name: Nagios-Passive
+provides:
+  Nagios::Passive:
+    file: lib/Nagios/Passive.pm
+    version: v0.3.0
+  Nagios::Passive::Base:
+    file: lib/Nagios/Passive/Base.pm
+    version: 0
+  Nagios::Passive::BulkResult:
+    file: lib/Nagios/Passive/BulkResult.pm
+    version: 0
+  Nagios::Passive::CommandFile:
+    file: lib/Nagios/Passive/CommandFile.pm
+    version: 0
+  Nagios::Passive::ResultPath:
+    file: lib/Nagios/Passive/ResultPath.pm
+    version: 0
+  Nagios::Passive::Role::Tempfile:
+    file: lib/Nagios/Passive/Role/Tempfile.pm
+    version: 0
+requires:
+  Any::Moose: 0
+  File::Temp: 0
+  MouseX::NativeTraits: 0
+  Nagios::Plugin: 0
+  perl: 5.010
+  version: 0
+resources:
+  license: http://dev.perl.org/licenses/
+  repository: http://github.com/datamuc/Nagios-Passive
+version: v0.3.0
